@@ -1,0 +1,14 @@
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\bin\Debug\net6.0\SosPets.DTO.deps.json
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\bin\Debug\net6.0\SosPets.DTO.runtimeconfig.json
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\bin\Debug\net6.0\SosPets.DTO.dll
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\bin\Debug\net6.0\SosPets.DTO.pdb
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.csproj.AssemblyReference.cache
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.AssemblyInfoInputs.cache
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.AssemblyInfo.cs
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.csproj.CoreCompileInputs.cache
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.dll
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\refint\SosPets.DTO.dll
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.pdb
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\SosPets.DTO.genruntimeconfig.cache
+C:\Users\user\dev\sos_pets\backend\apis\core\SosPetsMinimalApi\ClassLibrary1\obj\Debug\net6.0\ref\SosPets.DTO.dll
