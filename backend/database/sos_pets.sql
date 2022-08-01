@@ -4,8 +4,6 @@ GO
 DROP DATABASE IF EXISTS SosPetsDb
 GO
 
-DROP DATABASE SosPetsDb
-
 CREATE DATABASE SosPetsDb
 GO
 
@@ -59,10 +57,10 @@ CREATE TABLE [EstablishmentProfessionals] (
   [Id] INT PRIMARY KEY IDENTITY,
   [Establishment] INT NOT NULL,
   [Professional] INT NOT NULL,
-  CONSTRAINT [Establishment_FK]
+  CONSTRAINT [Establishment_FK_0]
     FOREIGN KEY ([Establishment])
     REFERENCES [Establishment]([Id]),
-  CONSTRAINT [Professional_FK]
+  CONSTRAINT [Professional_FK_0]
     FOREIGN KEY ([Professional])
     REFERENCES [Professional]([Id])
 );
@@ -136,10 +134,10 @@ CREATE TABLE [AnamnesisMedicines] (
   [Dose] INT NOT NULL,
   [Interval] TIME NOT NULL,
   [Details] VARCHAR(300),
-  CONSTRAINT [Anamnesis_FK]
+  CONSTRAINT [Anamnesis_FK_0]
     FOREIGN KEY ([Anamnesis])
     REFERENCES [Anamnesis]([Id]),
-  CONSTRAINT [Medicine_FK]
+  CONSTRAINT [Medicine_FK_0]
     FOREIGN KEY ([Medicine])
     REFERENCES [Medicine]([Id])
 );
@@ -151,10 +149,10 @@ CREATE TABLE [AnamnesisSurgeries] (
   [Surgery] INT NOT NULL,
   [Details] VARCHAR(300),
   [Date] DATE DEFAULT GETDATE(),
-  CONSTRAINT [Anamnesis_FK]
+  CONSTRAINT [Anamnesis_FK_1]
     FOREIGN KEY ([Anamnesis])
     REFERENCES [Anamnesis]([Id]),
-  CONSTRAINT [Surgery_FK]
+  CONSTRAINT [Surgery_FK_0]
     FOREIGN KEY ([Surgery])
     REFERENCES [Surgery]([Id])
 );
@@ -166,10 +164,10 @@ CREATE TABLE [AnamnesisVaccines] (
   [Vaccine] INT NOT NULL,
   [Date] DATE DEFAULT GETDATE(),
   [Expiration] DATE DEFAULT CONVERT(varchar(10), (DATEADD(YYYY, +1, GETDATE())), 120),
-  CONSTRAINT [Anamnesis_FK]
+  CONSTRAINT [Anamnesis_FK_2]
     FOREIGN KEY ([Anamnesis])
     REFERENCES [Anamnesis]([Id]),
-  CONSTRAINT [Vaccine_FK]
+  CONSTRAINT [Vaccine_FK_0]
     FOREIGN KEY ([Vaccine])
     REFERENCES [Vaccine]([Id])
 );
@@ -197,7 +195,7 @@ CREATE TABLE [Pet] (
   [Breed] INT NOT NULL,
   [Gender] char(1),
   [Anamnesis] INT NOT NULL,
-  CONSTRAINT [Tutor_FK]
+  CONSTRAINT [Tutor_FK_0]
     FOREIGN KEY ([Tutor])
     REFERENCES [Tutor]([Id]),
   CONSTRAINT [Specie_FK]
@@ -206,7 +204,7 @@ CREATE TABLE [Pet] (
   CONSTRAINT [Breed_FK]
     FOREIGN KEY ([Breed])
     REFERENCES [Breed]([Id]),
-  CONSTRAINT [Anamnesis_FK]
+  CONSTRAINT [Anamnesis_FK_3]
     FOREIGN KEY ([Anamnesis])
     REFERENCES [Anamnesis]([Id])
 );
@@ -215,7 +213,7 @@ GO
 CREATE TABLE [Agenda] (
   [Id] INT PRIMARY KEY IDENTITY,
   [Tutor] INT NOT NULL,
-  CONSTRAINT [Tutor_FK]
+  CONSTRAINT [Tutor_FK_1]
     FOREIGN KEY ([Tutor])
     REFERENCES [Tutor]([Id])
 );
@@ -234,10 +232,10 @@ CREATE TABLE [Appointment] (
   CONSTRAINT [Pet_FK]
     FOREIGN KEY ([Pet])
     REFERENCES [Pet]([Id]),
-  CONSTRAINT [Establishment_FK]
+  CONSTRAINT [Establishment_FK_1]
     FOREIGN KEY ([Establishment])
     REFERENCES [Establishment]([Id]),
-  CONSTRAINT [Professional_FK]
+  CONSTRAINT [Professional_FK_1]
     FOREIGN KEY ([Professional])
     REFERENCES [Professional]([Id])
 );
@@ -250,10 +248,10 @@ CREATE TABLE [AppointmentMedicines] (
   [Dose] INT NOT NULL,
   [Interval] TIME NOT NULL,
   [Details] VARCHAR(300),
-  CONSTRAINT [Appointment_FK]
+  CONSTRAINT [Appointment_FK_0]
     FOREIGN KEY ([Appointment])
     REFERENCES [Appointment]([Id]),
-  CONSTRAINT [Medicine_FK]
+  CONSTRAINT [Medicine_FK_1]
     FOREIGN KEY ([Medicine])
     REFERENCES [Medicine]([Id])
 );
@@ -264,10 +262,10 @@ CREATE TABLE [AppointmentSurgeries] (
   [Appointment] INT NOT NULL,
   [Surgery] INT NOT NULL,
   [Details] VARCHAR(300),
-  CONSTRAINT [Appointment_FK]
+  CONSTRAINT [Appointment_FK_1]
     FOREIGN KEY ([Appointment])
     REFERENCES [Appointment]([Id]),
-  CONSTRAINT [Surgery_FK]
+  CONSTRAINT [Surgery_FK_1]
     FOREIGN KEY ([Surgery])
     REFERENCES [Surgery]([Id])
 );
@@ -278,10 +276,10 @@ CREATE TABLE [AppointmentVaccines] (
   [Appointment] INT NOT NULL,
   [Vaccine] INT NOT NULL,
   [Expiration] DATE DEFAULT CONVERT(varchar(10), (DATEADD(YYYY, +1, GETDATE())), 120),
-  CONSTRAINT [Appointment_FK]
+  CONSTRAINT [Appointment_FK_2]
     FOREIGN KEY ([Appointment])
     REFERENCES [Appointment]([Id]),
-  CONSTRAINT [Vaccine_FK]
+  CONSTRAINT [Vaccine_FK_1]
     FOREIGN KEY ([Vaccine])
     REFERENCES [Vaccine]([Id])
 );
